@@ -1,0 +1,44 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+    <link rel="stylesheet" href="Dependences/bootstrap-3.3.7/css/bootstrap.min.css">
+    <script src="Dependences/jquery-3.3.1.min.js"></script>
+    <script src="Dependences/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<style>
+body
+{
+	background-color: transparent;
+}
+.jumbotron
+{   
+	
+    display: inline-block;
+    border: solid black 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+	background-color: rgb(255, 255, 255, 0.3);
+	
+	
+ }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="jumbotron">
+	  <div class="btn-group btn-group-lg center-block">
+		<h1 style="color:white;"><center>Select your trailer</center></h1>
+			<button onclick="mp.trigger('SwitchTrailerOption', 1);" type="button" class="btn btn-primary btn-block">Tanker</button>
+			<button onclick="mp.trigger('SwitchTrailerOption', 2);" type="button" class="btn btn-primary btn-block">Logs</button>
+			<button onclick="mp.trigger('SwitchTrailerOption', 3);" type="button" class="btn btn-primary btn-block">Container</button>
+			<button onclick="mp.trigger('SwitchTrailerOption', 4);" type="button" class="btn btn-primary btn-block">Vehicles</button>
+		</div>
+	</div>
+		
+</div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,354 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+    <link rel="stylesheet" href="Dependences/bootstrap-3.3.7/css/bootstrap.min.css">
+    <script src="Dependences/jquery-3.3.1.min.js"></script>
+    <script src="Dependences/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script>
+var CorrectAnswers = 0;
+$(document).ready(function(){
+	$("#Button_Question1").click(function(){
+		$("#Page_Question1").show(1000);
+		$("#Page_Question2").hide(500);
+		$("#Page_Question3").hide(500);
+		$("#Page_Question4").hide(500);
+		$("#Page_Question5").hide(500);
+		$("#Page_Question6").hide(500);
+		$("#Page_Question7").hide(500);
+	});
+	$("#Button_Question2").click(function(){
+		$("#Page_Question1").hide(500);
+		$("#Page_Question2").show(1000);
+		$("#Page_Question3").hide(500);
+		$("#Page_Question4").hide(500);
+		$("#Page_Question5").hide(500);
+		$("#Page_Question6").hide(500);
+		$("#Page_Question7").hide(500);
+	});
+	$("#Button_Question3").click(function(){
+		$("#Page_Question1").hide(500);
+		$("#Page_Question2").hide(500);
+		$("#Page_Question3").show(1000);
+		$("#Page_Question4").hide(500);
+		$("#Page_Question5").hide(500);
+		$("#Page_Question6").hide(500);
+		$("#Page_Question7").hide(500);
+	});
+	$("#Button_Question4").click(function(){
+		$("#Page_Question1").hide(500);
+		$("#Page_Question2").hide(500);
+		$("#Page_Question3").hide(500);
+		$("#Page_Question4").show(1000);
+		$("#Page_Question5").hide(500);
+		$("#Page_Question6").hide(500);
+		$("#Page_Question7").hide(500);
+	});
+	$("#Button_Question5").click(function(){
+		$("#Page_Question1").hide(500);
+		$("#Page_Question2").hide(500);
+		$("#Page_Question3").hide(500);
+		$("#Page_Question4").hide(500);
+		$("#Page_Question5").show(1000);
+		$("#Page_Question6").hide(500);
+		$("#Page_Question7").hide(500);
+	});
+	$("#Button_Question6").click(function(){
+		$("#Page_Question1").hide(500);
+		$("#Page_Question2").hide(500);
+		$("#Page_Question3").hide(500);
+		$("#Page_Question4").hide(500);
+		$("#Page_Question5").hide(500);
+		$("#Page_Question6").show(1000);
+		$("#Page_Question7").hide(500);
+	});
+	$("#Button_Question7").click(function(){
+		$("#Page_Question1").hide(500);
+		$("#Page_Question2").hide(500);
+		$("#Page_Question3").hide(500);
+		$("#Page_Question4").hide(500);
+		$("#Page_Question5").hide(500);
+		$("#Page_Question6").hide(500);
+		$("#Page_Question7").show(1000);
+	});
+
+
+
+	
+	$("#Question1_Buttons").click(function(){
+		$(this).prop("disabled",true);		
+		$("#Page_Question1").hide(500);
+		$("#Page_Question2").show(1000);
+		$("#Page_Question3").hide(500);
+		$("#Page_Question4").hide(500);
+		$("#Page_Question5").hide(500);
+		$("#Page_Question6").hide(500);
+		$("#Page_Question7").hide(500);		
+	});
+	$("#Question2_Buttons").click(function(){
+		$(this).prop("disabled",true);
+		$("#Page_Question1").hide(500);
+		$("#Page_Question2").hide(500);
+		$("#Page_Question3").show(1000);
+		$("#Page_Question4").hide(500);
+		$("#Page_Question5").hide(500);
+		$("#Page_Question6").hide(500);
+		$("#Page_Question7").hide(500);		
+	});	
+	$("#Question3_Buttons").click(function(){
+		$(this).prop("disabled",true);
+		$("#Page_Question1").hide(500);
+		$("#Page_Question2").hide(500);
+		$("#Page_Question3").hide(500);
+		$("#Page_Question4").show(1000);
+		$("#Page_Question5").hide(500);
+		$("#Page_Question6").hide(500);
+		$("#Page_Question7").hide(500);		
+	});	
+	$("#Question4_Buttons").click(function(){
+		$(this).prop("disabled",true);
+		$("#Page_Question1").hide(500);
+		$("#Page_Question2").hide(500);
+		$("#Page_Question3").hide(500);
+		$("#Page_Question4").hide(500);
+		$("#Page_Question5").show(1000);
+		$("#Page_Question6").hide(500);
+		$("#Page_Question7").hide(500);		
+	});	
+	$("#Question5_Buttons").click(function(){
+		$(this).prop("disabled",true);
+		$("#Page_Question1").hide(500);
+		$("#Page_Question2").hide(500);
+		$("#Page_Question3").hide(500);
+		$("#Page_Question4").hide(500);
+		$("#Page_Question5").hide(500);
+		$("#Page_Question6").show(1000);
+		$("#Page_Question7").hide(500);		
+	});		
+	$("#Question6_Buttons").click(function(){
+		$(this).prop("disabled",true);
+		$("#Page_Question1").hide(500);
+		$("#Page_Question2").hide(500);
+		$("#Page_Question3").hide(500);
+		$("#Page_Question4").hide(500);
+		$("#Page_Question5").hide(500);
+		$("#Page_Question6").hide(500);
+		$("#Page_Question7").show(1000);		
+	});			
+	$("#Question7_Buttons").click(function(){
+		$(this).prop("disabled",true);
+	
+		
+	});	
+	$("#Finish_Button").click(function(){
+		if(CorrectAnswers >= 6)
+		{
+			$("#Page_Question7").hide(500);
+			$("#Page_Finished_Succesfuly").show(1000);
+			CorrectAnswers = 0;
+		}
+		else
+		{
+			$("#Page_Question7").hide(500);
+			$("#Page_Finished_Failed").show(1000);		
+		}
+		
+	});		
+});
+</script>
+<style>
+body
+{
+	margin-top: 20px;
+	background-color: transparent;
+}
+.jumbotron
+{   
+	background-image: url("abstract_graphic_design__red-wallpaper-1920x1080.jpg");
+	background-position: center;
+    width: 900px;
+	padding: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border: 1px solid grey;
+
+	
+}
+.container
+{
+background-color: rgb(147, 147, 147, 0.3);
+width: 1000px;
+
+}
+.well{
+
+width: 900px;
+padding: 5px;
+background-image: url("abstract_graphic_design__red-wallpaper-1920x1080.jpg");
+background-position: right;
+text-align: left;
+border: 1px solid grey;
+margin-bottom: 5px;
+}
+button{
+	margin-right: 5px;
+}
+p
+{
+	color: white;
+	
+}
+.btn
+{
+	transition-duration: 450ms;
+	transition-property: background;
+}
+.btn:hover
+{
+	background-color:#e6e6e6;
+	border-color: #e6e6e6;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<center>
+	<div class="jumbotron">
+		  <img src="dsimage.png">
+			<div class="btn-group">  
+					<button type="button" id="Button_Question1" class="btn btn-default btn-md"><b>Question 1</b></button>
+					<button type="button" id="Button_Question2" class="btn btn-default btn-md"><b>Question 2</b></button>
+					<button type="button" id="Button_Question3" class="btn btn-default btn-md"><b>Question 3</b></button>
+					<button type="button" id="Button_Question4" class="btn btn-default btn-md"><b>Question 4</b></button>
+					<button type="button" id="Button_Question5" class="btn btn-default btn-md"><b>Question 5</b></button>
+					<button type="button" id="Button_Question6" class="btn btn-default btn-md"><b>Question 6</b></button>
+					<button type="button" id="Button_Question7" class="btn btn-default btn-md"><b>Question 7</b></button>
+			</div>
+	</div>
+		
+	<div class="well">
+		
+		<div id="Page_Question1">
+			<center style="color: white">
+				<div><b>Welcome to driving test. You have 7 questions and your task is to answer it all. 6/7 questions</b></div>
+				<div><b>Must be correct if they are not,test will not pass our norms. Be careful when you press button with</b></div>
+				<div><b>some answer because there is no turning back. If you are not sure with question leave it alone and try</b></div>
+				<div><b>answer another question in toolbar above. After you finish your test, press "Finish" button on page</b></div>
+				<div><b>"Question7" and result will be shown immediately. If you fail test, you must pay school again, but</b></div>
+				<div><b>if you pass this test you will be ready for drive test. Good luck.</b></div>
+				
+				<h2 style="color:white;">
+					What this road sign represent in traffic?
+				</h2>					
+				<img src="question1.jpg" style="height: 300px; weight: 200px; margin: 20px 20px;"></img>
+					<fieldset id="Question1_Buttons" enabled>
+						<div><button type="button" onclick="$(this).css('background-color', '#99d6ff');" id="Question1_Answer1" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Info : Cant go left.</b></button></div>
+						<div><button type="button" onclick="$(this).css('background-color', '#99d6ff');" id="Question1_Answer2" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Warning : Cant go left.</b></button></div>
+						<div><button type="button" onclick="CorrectAnswers ++; $(this).css('background-color', '#99d6ff');"  id="Question1_Answer3" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Strict command : Dont go left.</b></button></div>				
+					</fieldset>
+				</center>
+		</div>
+		<div id="Page_Question2" style="display:none;">
+			<center>
+				<h2 style="color:white;">
+					What this road sign represent in traffic?
+				</h2>					
+				<img src="question2.jpg" style="height: 300px; weight: 200px; margin: 20px 20px;"></img>
+					<fieldset id="Question2_Buttons" enabled>
+						<div><button type="button" onclick="$(this).css('background-color', '#99d6ff');" id="Question2_Answer1" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Strict command : Road closed.</b></button></div>
+						<div><button type="button" onclick="CorrectAnswers ++; $(this).css('background-color', '#99d6ff');" id="Question2_Answer2" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Warning : Road under construction.</b></button></div>
+						<div><button type="button" onclick="$(this).css('background-color', '#99d6ff');" id="Question2_Answer3" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Info: Worker on road.</b></button></div>				
+					</fieldset>
+			</center>		
+		</div>		
+		<div id="Page_Question3" style="display:none;">
+			<center>
+				<h2 style="color:white;">
+					What would you do if you see this situation on road?
+				</h2>					
+				<img src="question3.jpg" style="height: 300px; weight: 200px; margin: 20px 20px;"></img>
+					<fieldset id="Question3_Buttons" enabled>
+						<div><button type="button" onclick="CorrectAnswers ++; $(this).css('background-color', '#99d6ff');" id="Question3_Answer1" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Slow down vehicle and turn direction indicators if needed.</b></button></div>
+						<div><button type="button" onclick="$(this).css('background-color', '#99d6ff');" id="Question3_Answer2" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Drive on same speed and without safety.</b></button></div>
+						<div><button type="button" onclick="$(this).css('background-color', '#99d6ff');" id="Question3_Answer3" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Press car horn and yell at workers.</b></button></div>				
+					</fieldset>
+			</center>		
+		</div>				
+		<div id="Page_Question4" style="display:none;">
+			<center>
+				<h2 style="color:white;">
+					What would you do if you see this in traffic?
+				</h2>					
+				<img src="question4.jpg" style="height: 300px; weight: 200px; margin: 20px 20px;"></img>
+					<fieldset id="Question4_Buttons" enabled>
+						<div><button type="button" onclick="$(this).css('background-color', '#99d6ff');" id="Question4_Answer1" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Scream and run away from that person.</b></button></div>
+						<div><button type="button" onclick="$(this).css('background-color', '#99d6ff');" id="Question4_Answer2" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Take person hand and try to pull him out.</b></button></div>
+						<div><button type="button" onclick="CorrectAnswers ++; $(this).css('background-color', '#99d6ff');" id="Question4_Answer3" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Stay with person, try to not panic and call 911.</b></button></div>				
+					</fieldset>
+			</center>		
+		</div>			
+		<div id="Page_Question5" style="display:none;">
+			<center>
+				<h2 style="color:white;">
+					What would you do if you see this vehicle with sirens on in mirrors?
+				</h2>					
+				<img src="question5.png" style="height: 300px; weight: 200px; margin: 20px 20px;"></img>
+					<fieldset id="Question5_Buttons" enabled>
+						<div><button type="button" onclick="CorrectAnswers ++; $(this).css('background-color', '#99d6ff');" id="Question5_Answer1" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Move my vehicle to side and wait till this vehicle is gone.</b></button></div>
+						<div><button type="button" onclick="$(this).css('background-color', '#99d6ff');" id="Question5_Answer2" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Nothing. Just drive normal.</b></button></div>
+						<div><button type="button" onclick="$(this).css('background-color', '#99d6ff');" id="Question5_Answer3" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Speed up so I dont block it.</b></button></div>				
+					</fieldset>
+			</center>			
+		</div>
+		<div id="Page_Question6" style="display:none;">
+			<center>
+				<h2 style="color:white;">
+					Is this person driving in correct line with all needed equipment?
+				</h2>					
+				<img src="question6.jpg" style="height: 300px; weight: 200px; margin: 20px 20px;"></img>
+					<fieldset id="Question6_Buttons" enabled>
+						<div><button type="button" onclick="$(this).css('background-color', '#99d6ff');" id="Question6_Answer1" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Yes. He drive in correct line with needed equipment.</b></button></div>
+						<div><button type="button" onclick="$(this).css('background-color', '#99d6ff');" id="Question6_Answer2" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>No. He drive in wrong line with needed equipment.</b></button></div>
+						<div><button type="button" onclick="CorrectAnswers ++; $(this).css('background-color', '#99d6ff');" id="Question6_Answer3" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>No. He is in correct line but without needed equipment.</b></button></div>				
+					</fieldset>
+			</center>	
+		</div>
+		<div id="Page_Question7" style="display:none;">
+			<center>
+				<h2 style="color:white;">
+					Is this vehicle legal for road drive?
+				</h2>					
+				<img src="question7.jpg" style="height: 300px; weight: 200px; margin: 20px 20px;"></img>
+					<fieldset id="Question7_Buttons" enabled>
+						<div><button type="button" onclick="$(this).css('background-color', '#99d6ff');" id="Question7_Answer1" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Maybe if windows get fixed. </b></button></div>
+						<div><button type="button" onclick="CorrectAnswers ++; $(this).css('background-color', '#99d6ff');" id="Question7_Answer2" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>No. Does not have any valid lights, too much rust and without windows.</b></button></div>
+						<div><button type="button" onclick="$(this).css('background-color', '#99d6ff');" id="Question7_Answer3" class="btn btn-default btn-block" style="margin-bottom: 5px;"><b>Yes because car is registered and have valid register plates.</b></button></div>													
+					</fieldset>
+					<div><button type="button" id="Finish_Button" class="btn btn-success btn-block" style="margin-bottom: 5px;"><b>Finish</b></button></div>	
+			</center>	
+		</div>	
+		<div id="Page_Finished_Succesfuly" style="display:none;">
+			<center>
+				<h2 style="color:white;">
+					<b>YOU PASSED TEST!</b>
+				</h2>					
+				<div style="color: white;"><b>Your instructor will wait you in vehicle. You can find him on our parking.</b></div>	
+				<div><button type="button" onclick="mp.trigger('GoToDrivingTest');" id="Finish_Button" class="btn btn-success btn-block" style="margin-bottom: 5px;"><b>Quit page</b></button></div>	
+			</center>	
+		</div>
+			<div id="Page_Finished_Failed" style="display:none;">
+				<center>
+					<h2 style="color:white;">
+						<b>YOU FAILED TEST.</b>
+					</h2>
+					<div style="color: white;"><b>If you want to see all correct answers visit our official page (( OOC forum ))</b></div>	
+					<div><button type="button" onclick="mp.trigger('QuitDrivingTest');" id="Finish_Button" class="btn btn-success btn-block" style="margin-bottom: 5px; background-color: #e06161; border-color: #e06161;"><b>Quit page</b></button></div>	
+				</center>	
+			</div>			
+		</div>		
+		</div>	
+</center>
+
+</body>
+
+</html>

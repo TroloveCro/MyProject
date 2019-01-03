@@ -1,0 +1,281 @@
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+    <link rel="stylesheet" href="Dependences/bootstrap-3.3.7/css/bootstrap.min.css">
+    <script src="Dependences/jquery-3.3.1.min.js"></script>
+    <script src="Dependences/bootstrap-3.3.7/js/bootstrap.min.js"></script>
+<script>
+var imgopened = false;
+var contactopened = false;
+var startappopened = false;
+$(document).ready(function(){
+	$("#qb").click(function(){
+	contactopened = false;
+	startappopened = false;
+	  if(imgopened)
+	  {
+		  $("#demo").show(1000);
+		  $("#Contactdiv").hide(500);
+		  $("#VehicleDiv").hide(500);
+		  $("#choosecat").hide(500);
+		  imgopened = false;
+		  return false;
+	  }
+		$("#demo").hide(500);
+		$("#VehicleDiv").show(1000);
+		$("#Contactdiv").hide(500);
+		$("#choosecat").hide(500);
+		
+		imgopened = true;
+	});
+
+
+	$("#cub").click(function(){
+		imgopened = false;
+		startappopened = false;
+		if(contactopened)
+		{
+		  $("#demo").show(1000);
+		  $("#VehicleDiv").hide(500);	
+		  $("#Contactdiv").hide(500);
+		  $("#choosecat").hide(500);
+		  contactopened = false;
+		  return false;
+		}
+		  $("#demo").hide(500);
+		  $("#VehicleDiv").hide(500);
+		  $("#choosecat").hide(500);		  
+		  $("#Contactdiv").show(1000);
+		  contactopened = true;
+		
+	});	
+	$("#startapp").click(function(){
+		imgopened == false;
+		contactopened = false;
+		if(startappopened)
+		{
+		  $("#demo").show(1000);
+		  $("#VehicleDiv").hide(500);	
+		  $("#Contactdiv").hide(500);
+		  $("#choosecat").hide(500);
+		  startappopened = false;
+		  return false;
+		}
+		  $("#demo").hide(500);
+		  $("#VehicleDiv").hide(500);	
+		  $("#Contactdiv").hide(500);
+		  $("#choosecat").show(1000);
+		  startappopened = true;
+		
+	});	
+
+});
+</script>
+<style>
+body
+{
+	margin-top: 20px;
+	background-color: transparent;
+}
+.jumbotron
+{   
+	background-image: url("abstract_graphic_design__red-wallpaper-1920x1080.jpg");
+	background-position: center;
+    width: 900px;
+	padding: 15px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	border: 1px solid grey;
+
+	
+}
+.container
+{
+background-color: rgb(147, 147, 147, 0.3);
+width: 1000px;
+
+}
+.well{
+
+width: 900px;
+padding: 5px;
+background-image: url("abstract_graphic_design__red-wallpaper-1920x1080.jpg");
+background-position: right;
+text-align: left;
+border: 1px solid grey;
+margin-bottom: 5px;
+}
+.btn
+{
+	transition-duration: 450ms;
+	transition-property: background;
+}
+.btn:hover
+{
+	background-color:#e6e6e6;
+	border-color: #e6e6e6;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+	<center>
+		  <div class="jumbotron">
+		  <img src="dsimage.png">
+			<div class="btn-group center-block">  
+				<center>
+					<button type="button" id="startapp" class="btn btn-default btn-md"><b>Start Application</b></button>
+					<button type="button" id="qb" class="btn btn-default btn-md"><b>Vehicles</b></button>
+					<button type="button" id="cub" class="btn btn-default btn-md"><b>Contact us</b></button>
+					<button onclick="mp.trigger('QuitDrivingSchool');" type="button" class="btn btn-default btn-md"><b>Quit page</b></button>
+				</center>
+				</div>
+			</div>
+		
+			<div class="well">
+			<div id="choosecat" style="display:none;">
+				<center>
+					<h2 style="color: white;">
+					Choose your category:
+					</h2>			
+					<button onclick="mp.trigger('CheckMoney', 1000, 1);" type="button" class="btn btn-default btn-md"><b>Category B</b></button>
+					<button onclick="mp.trigger('CheckMoney', 1250, 2);" type="button" class="btn btn-default btn-md"><b>Category C</b></button>
+					<button onclick="mp.trigger('CheckMoney', 1380, 3);" type="button" class="btn btn-default btn-md"><b>Category CE</b></button>
+					<button onclick="mp.trigger('CheckMoney', 500, 4);" type="button" class="btn btn-default btn-md"><b>Category F,G</b></button>
+					<div class="alert alert-danger" style="padding: 5px; margin-left: 150px; margin-right: 150px; margin-top: 25px;">
+					  <strong>Be careful!</strong> After you choose and start you application, you need to finish it!
+					</div>				
+				</center>			
+			</div>
+			<div id="Contactdiv" style="display:none;">
+			<left>
+				<h2 style="color: white;">
+				Contact list:
+				</h2>
+				<h4 style="color: white; padding: 0px;">
+				<ol>
+
+				  <li>Email: drivingschoolls@dworld.com</li>
+				  <li>Phone: 0800 6634</li>
+				  <li>Web page: Vapis-LS.com</li>
+				</ol>
+				</h4>	
+				<h2 style="color: white;">
+				FAQ:
+				</h2>	
+				<h4 style="color: white; padding: 0px;">
+				
+				<div><b>1. What if I fail test in class or on the road?</b></div>
+				<div>If you fail test on road or in class, application will be closed and you must pay another one.</div>
+				<div>Our process and Los Santos road and vehicle laws must be strict in all segments and we does not tolerate</div>
+				<div>mistakes. To avoid closing application our team will prepare candidate for best results.</div>
+				</h4>
+
+				<h4 style="color: white; padding: 0px;">
+				
+				<div><b>1. What is conditions of passing.</b></div>
+				<div>conditions of passing are tolerance limits. If you have more then one wrong answers you will fail test in class.</div>
+				<div>This is only condition for class test, but conditions of passing on the road are more then just one wrong answer.</div>
+				<div>On road test you need to drive less then 30mph in city, obey road and traffic rules, </div>
+				<div>avoid damaging school vehicle or other vehicles and show learned parking skills.</div>
+				</h4>		
+
+				
+			</left>
+			</div>
+			<div id="VehicleDiv"  style="display:none;"> 
+			<center>
+				<img src="Asea.png"></img>
+				<p style="color:white;">Asea: Light vehicle for daily driving <b>B category</b></p>
+				<img src="Mule.png"></img>
+				<p style="color:white;">Mule: small delivery truck <b>C category</b></p>
+				<img src="Hauler.png"></img>
+				<p style="color:white;">Hauler: heavy deliver truck for trailers <b>CE category</b></p>
+				<img src="forklift.png" style="width: 350px; height:200px;"></img>
+				<p style="color:white;">Forklift: industry vehicle <b>F,G category</b></p>
+																	
+			</center>
+			</div>
+			<div id="demo">
+			<h2 style="color: white;">
+			I want to get driver license.
+			</h2>
+
+			<h4 style="color: white; padding: 0px;">
+			
+			<div>To get your driving licence you need to complete next tasks.</div>
+			<div>
+			If you successfully complete all this tasks you will be able to get your documents.
+
+			</div>
+			</h4>
+			<h4 style="color: white; padding: 0px;">
+			<ol>
+
+			  <li>Complete road and traffic test in class.</li>
+			  <li>Drive 30 hours on road with your insturctor.</li>
+			  <li>Complete driving test on road.</li>
+			</ol>
+			</h4>
+			<h4 style="color: white; padding: 0px;">
+			<div>You need to select your licence category. Find out price and category type in table below.</div>
+			</h4>
+			<div class="table-responsive-sm">
+			  <table class="table" style="color: white">
+			  <thead>
+				<tr>
+				  <th scope="col">#</th>
+				  <th scope="col">Category</th>
+				  <th scope="col">Price</th>
+				  <th scope="col">Info</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <th scope="row">1</th>
+				  <td>B</td>
+				  <td style="color: #b0fda8"><b>1000$</b></td>
+				  <td>Light vehicles</td>
+				</tr>
+				<tr>
+				  <th scope="row">2</th>
+				  <td>C</td>
+				  <td style="color: #b0fda8"><b>1250$</b></td>
+				  <td>Delivery trucks</td>
+
+				</tr>
+				<tr>
+				  <th scope="row">3</th>
+				  <td>CE</td>
+				  <td style="color: #b0fda8"><b>1380$</b></td>
+				  <td>truck with trailers</td>
+				</tr>
+				<tr>
+				  <th scope="row">4</th>
+				  <td>F,G</td>
+				  <td style="color: #b0fda8"><b>500$</b></td>
+				  <td>Utility vehicles</td>
+				</tr>
+			  </tbody>
+			  </table>
+			<h2 style="color: white;">
+			Where can I find licence for airplanes and boats?
+			</h2>
+			<h4 style="color: white; padding: 0px;">
+			<div>Licence for driving boats is located .. Does not exist .. and flying licence is located at</div>
+			<div>Los Santos Airport. For other questions ask us with "Contact Us" button.</div>
+			</h4>
+			
+			</div>
+
+		</div>
+	</div>
+		<div class="well" style="">
+		<center><b style="color: white">Powered by Driving school Vapid Los Santos and LSPD</b></center>
+		</center>
+</div>
+
+</body>
+
+</html>
